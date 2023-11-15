@@ -74,8 +74,8 @@ label= "BASE"                              ;
 
                 &kp Q       &kp W       &kp F       &kp P       &kp G           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
                 &mt LCTRL A  &mt LALT R  &mt LSHFT S &mt LGUI T &kp D           &kp H       &mt RGUI N &mt RSHFT E &mt RALT I  &mt RCTRL O
-    &bt BT_CLR       &kp Z       &kp X       &kp C       &kp V       &kp B           &kp K       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
-                                        &out OUT_BLE  &lt NAV TAB   &kp SPACE     &out OUT_USB  &kp RET   &kp BSPC
+    &kp Q       &kp Z       &kp X       &kp C       &kp V       &kp B           &kp K       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
+                                        &bt BT_CLR  &lt NAV TAB   &kp SPACE     &out OUT_TOG  &kp RET   &kp BSPC
                         >;
                 };
 
