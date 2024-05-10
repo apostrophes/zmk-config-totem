@@ -113,20 +113,20 @@ label= "NAVI"                              ;
 label= "SYM"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     #     ┃     @     ┃     (     ┃     )     ┃     ~     ┃   ┃     ˆ     ┃     +     ┃     $     ┃     %     ┃     –     ┃
+//             ┃     #     ┃     @     ┃     (     ┃     )     ┃     ~     ┃   ┃     ˆ     ┃     +     ┃     $     ┃     %     ┃     `     ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃     <     ┃     >     ┃    {      ┃      }    ┃     _     ┃   ┃     *     ┃     &     ┃      |    ┃      !    ┃     =     ┃
+//             ┃     <     ┃     >     ┃    {      ┃      }    ┃     _     ┃   ┃     *     ┃     &     ┃     |     ┃     !     ┃     =     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃  EMAIL1   ┃     =     ┃     [     ┃      ]    ┃           ┃   ┃   VOL-    ┃   VOL+    ┃   LAST    ┃   NEXT    ┃     \     ┃     -     ┃
+// ┃           ┃  EMAIL1   ┃     =     ┃     [     ┃      ]    ┃     –     ┃   ┃   VOL-    ┃   VOL+    ┃   LAST    ┃   NEXT    ┃     \     ┃     -     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃    ADJ    ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp HASH    &kp AT      &kp LPAR    &kp RPAR    &kp TILDE       &kp CARET   &kp PLUS    &kp DLLR   &kp PRCNT     &kp RA(MINUS)       
+                &kp HASH    &kp AT      &kp LPAR    &kp RPAR    &kp TILDE       &kp CARET   &kp PLUS    &kp DLLR   &kp PRCNT     &kp GRAVE       
                 &kp LT   &kp GT      &kp LBRC   &kp RBRC      &kp UNDER          &kp STAR  &kp AMPS &kp PIPE &kp EXCL   &kp EQUAL 
-    &trans      &kp RA(F18) &kp EQUAL &kp LBKT      &trans      &trans          &trans &trans &trans &trans  &kp BSLH   &kp MINUS         
+    &trans      &kp RA(F18) &kp EQUAL &kp LBKT      &trans      &kp RA(MINUS)          &trans &trans &trans &trans  &kp BSLH   &kp MINUS         
                                         &trans      &trans        &mo ADJ         &trans      &trans    &trans      
                         >;
                 };
