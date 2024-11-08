@@ -38,7 +38,7 @@
             };
             combo_cut {
                 timeout-ms = <50>;
-                key-positions = <23 24>;
+                key-positions = <22 24>;
                 bindings = <&kp LG(X)>;
             };
             combo_alt_cut {
