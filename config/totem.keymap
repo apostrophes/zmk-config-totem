@@ -43,32 +43,32 @@
             };
             combo_alt_cut {
                 timeout-ms = <50>;
-                key-positions = <12 23>;
+                key-positions = <11 22>;
                 bindings = <&kp LG(X)>;
             };
             combo_copy {
                 timeout-ms = <50>;
-                key-positions = <24 25>;
+                key-positions = <23 24>;
                 bindings = <&kp LG(C)>;
             };
             combo_alt_copy {
                 timeout-ms = <50>;
-                key-positions = <13 24>;
+                key-positions = <12 23>;
                 bindings = <&kp LG(C)>;
             };
             combo_paste {
                 timeout-ms = <50>;
-                key-positions = <25 26>;
+                key-positions = <24 25>;
                 bindings = <&kp LG(V)>;
             };
             combo_alt_paste {
                 timeout-ms = <50>;
-                key-positions = <14 25>;
+                key-positions = <15 24>;
                 bindings = <&kp LG(V)>;
             };
             combo_func {
                 timeout-ms = <50>;
-                key-positions = <36 37>;
+                key-positions = <33 34>;
                 bindings = <&mo ADJ>;
             };
             combo_find {
@@ -179,20 +179,20 @@ label= "SYM"                               ;
 label= "ADJ"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃           ┃   ┃           ┃    F7     ┃    F8     ┃    F9     ┃    F12    ┃
+//             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃  BT NEXT  ┃  BT PREV  ┃   ┃           ┃    F7     ┃    F8     ┃    F9     ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃ BOOTLOAD  ┃ BT NEXT   ┃           ┃           ┃           ┃   ┃           ┃    F4     ┃    F5     ┃    F6     ┃    F11    ┃
+//             ┃ BOOTLOAD  ┃           ┃   BT 1    ┃   BT 2    ┃           ┃   ┃    F12    ┃    F4     ┃    F5     ┃    F6     ┃    F11    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃ BT PREV   ┃           ┃           ┃           ┃   ┃           ┃    F1     ┃    F2     ┃    F3     ┃    F10    ┃           ┃
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃    F1     ┃    F2     ┃    F3     ┃    F10    ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &sys_reset  &bt BT_CLR &out OUT_TOG &trans      &trans          &trans      &kp F7      &kp F8      &kp F9      &kp F12
-                &bootloader &bt BT_NXT  &trans      &trans      &trans          &trans      &kp F4      &kp F5      &kp F6      &kp F11  
-    &trans      &trans      &bt BT_PRV  &trans      &trans      &trans          &trans      &kp F1      &kp F2      &kp F3      &kp F10     &trans         
+                &sys_reset  &bt BT_CLR &out OUT_TOG &bt BT_NXT  &bt BT_PRV      &trans      &kp F7      &kp F8      &kp F9      &trans
+                &bootloader   &trans    &bt BT_SEL 1  &bt BT_SEL     &trans     &kp F12     &kp F4      &kp F5      &kp F6      &kp F11  
+    &trans      &trans        &trans    &trans      &trans      &trans          &trans      &kp F1      &kp F2      &kp F3      &kp F10     &trans         
                                         &trans      &trans      &trans          &trans      &trans      &trans      
                         >;
                 };
