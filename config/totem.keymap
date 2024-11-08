@@ -38,18 +38,38 @@
             };
             combo_cut {
                 timeout-ms = <50>;
-                key-positions = <22 23>;
+                key-positions = <23 24>;
+                bindings = <&kp LG(X)>;
+            };
+            combo_alt_cut {
+                timeout-ms = <50>;
+                key-positions = <12 23>;
                 bindings = <&kp LG(X)>;
             };
             combo_copy {
                 timeout-ms = <50>;
-                key-positions = <23 24>;
+                key-positions = <24 25>;
+                bindings = <&kp LG(C)>;
+            };
+            combo_alt_copy {
+                timeout-ms = <50>;
+                key-positions = <13 24>;
                 bindings = <&kp LG(C)>;
             };
             combo_paste {
                 timeout-ms = <50>;
-                key-positions = <24 25>;
+                key-positions = <25 26>;
                 bindings = <&kp LG(V)>;
+            };
+            combo_alt_paste {
+                timeout-ms = <50>;
+                key-positions = <14 25>;
+                bindings = <&kp LG(V)>;
+            };
+            combo_func {
+                timeout-ms = <50>;
+                key-positions = <36 37>;
+                bindings = <&mo ADJ>;
             };
             combo_find {
                 timeout-ms = <50>;
