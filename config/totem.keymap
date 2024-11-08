@@ -20,6 +20,7 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
+#define SETT 4
 
 &mt {
   quick-tap-ms = <100>;
@@ -76,15 +77,30 @@
                 key-positions = <15 24>;
                 bindings = <&kp LG(V)>;
             };
-            combo_func {
-                timeout-ms = <50>;
-                key-positions = <33 34>;
-                bindings = <&mo ADJ>;
-            };
             combo_find {
                 timeout-ms = <50>;
                 key-positions = <3 4>;
                 bindings = <&kp LG(F)>;
+            };
+            combo_alt_find {
+                timeout-ms = <50>;
+                key-positions = <4 14>;
+                bindings = <&kp LG(F)>;
+            };
+            combo_find_all_files {
+                timeout-ms = <50>;
+                key-positions = <3 4 14>;
+                bindings = <&kp LG(F)>;
+            };
+            combo_save {
+                timeout-ms = <50>;
+                key-positions = <11 14>;
+                bindings = <&kp LG(S)>;
+            };
+            combo_bt {
+                timeout-ms = <50>;
+                key-positions = <33 34>;
+                bindings = <&mo SETT>;
             };
     };
 
@@ -149,9 +165,9 @@ label= "NAVI"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &bt BT_CLR     &kp KP_N7  &kp KP_N8      &kp KP_N9   &kp LG(T)        &kp LG(BSLH)    &kp LC(DOWN)   &kp UP &kp LG(LALT)   &kp KP_PLUS
-                &kp KP_N0   &kp KP_N4    &kp KP_N5    &kp KP_N6   &kp LBKT        &kp RBKT    &kp LEFT   &kp DOWN   &kp RIGHT   &kp KP_MINUS
+                &mt LCTRL KP_N0   &mt LALT KP_N4    &kp KP_N5    &mt LGUI KP_N6   &kp LBKT        &kp RBKT    &kp LEFT   &kp DOWN   &kp RIGHT   &kp KP_MINUS
     &trans      &trans     &kp KP_N1   &kp KP_N2    &kp KP_N3   &kp LPAR        &kp RPAR    &kp KP_N1   &kp DOWN   &kp KP_N3   &kp KP_MULTIPLY &trans      
-                                        &trans      &trans      &trans          &mo ADJ     &kp KP_N0   &trans      
+                                        &kp LALT      &kp LGUI      &kp LSHFT         &mo ADJ     &kp KP_N0   &trans      
                         >;
                 };
 
@@ -203,7 +219,30 @@ label= "ADJ"                               ;
                 &sys_reset  &bt BT_CLR &out OUT_TOG &bt BT_NXT  &bt BT_PRV      &trans      &kp F7      &kp F8      &kp F9      &trans
                 &bootloader   &trans    &bt BT_SEL 1  &bt BT_SEL     &trans     &kp F12     &kp F4      &kp F5      &kp F6      &kp F11  
     &trans      &trans        &trans    &trans      &trans      &trans          &trans      &kp F1      &kp F2      &kp F3      &kp F10     &trans         
-                                        &trans      &trans      &trans          &trans      &trans      &trans      
+                                        &kp LALT      &kp LGUI      &kp LSHFT         &kp LSHFT      &kp LGUI      &kp LALT      
+                        >;
+                };
+
+                settings_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "SETT"                               ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃  BT NEXT  ┃  BT PREV  ┃   ┃           ┃           ┃           ┃           ┃           ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃ BOOTLOAD  ┃           ┃   BT 1    ┃   BT 2    ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &sys_reset  &bt BT_CLR &out OUT_TOG &bt BT_NXT  &bt BT_PRV      &trans      &trans      &trans      &trans      &trans
+                &bootloader   &trans    &bt BT_SEL 1  &bt BT_SEL     &trans     &trans     &trans      &trans      &trans      &trans  
+    &trans      &trans        &trans    &trans      &trans      &trans          &trans      &trans     &trans      &trans      &trans     &trans         
+                                        &trans      &trans      &trans         &trans      &trans     &trans      
                         >;
                 };
         };
